@@ -19,6 +19,11 @@ app.use(express.json());
 app.use('/', Redirectroute)
 app.use('/api/url', Urlroute)
 
+//testing
+app.get("/test",(req,res)=>{
+  res.send("mock 12 working....")
+})
+
 
 // starting the server && checking db connection
 const PORT = process.env.PORT || 5000
