@@ -8,7 +8,10 @@ const Url = require('../models/UrlSchema')
 
 const baseUrl = 'http:saradhi(url-shortner)';
 
-
+Urlroute.get("/prevoius", async(req,res)=>{
+    const data = await Url.find();
+    res.status(200).send(data);
+});
 
 Urlroute.post('/shorten', async (req, res) => {
     const { longUrl } = req.body 
