@@ -11,7 +11,7 @@ let app = express();
 // needed middlewares
 app.use(
   cors({
-    origin: ["http://localhost:3000","http://localhost:3001"],
+    origin: ["http://localhost:3000","https://merry-boba-1b1db7.netlify.app"],
   })
 );
 app.use(express.urlencoded({extended:true}));
