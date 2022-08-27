@@ -15,12 +15,21 @@ Urlroute.get("/prevoius", async(req,res)=>{
 
 Urlroute.post('/shorten', async (req, res) => {
     const { longUrl } = req.body 
-
+    const { custom } = req.body
+    
     if (!validUrl.isUri(baseUrl)) {
         return res.status(401).json('Invalid base URL')
     }
 
-    const urlCode = shortid.generate()
+    var urlCode;
+    if(custom)
+    {
+        urlCode = custom ;
+    }
+    else
+    {
+        urlCode = shortid.generate()
+    }
 
     if (validUrl.isUri(longUrl)) {
         try {
