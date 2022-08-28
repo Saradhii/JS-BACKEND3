@@ -3,4 +3,4 @@ Backend repository for custom-url-shortner ., Visit front-end repository for mor
 
 Front-end (repo) : https://github.com/Saradhii/Custom-url-shortener <br> 
 
-Deployment (Backend) : 
+Deployment (Backend) : https://url-shortner-mock12.herokuapp.com/ <br>
